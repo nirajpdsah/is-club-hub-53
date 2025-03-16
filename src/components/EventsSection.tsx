@@ -41,7 +41,7 @@ export default function EventsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-isclub-blue bg-isclub-blue-light/50 rounded-full">
+          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-isclub-teal bg-isclub-blue-light/50 rounded-full">
             What's Happening
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -80,12 +80,12 @@ export default function EventsSection() {
                 
                 <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center text-isclub-blue mb-4">
+                    <div className="flex items-center text-isclub-teal mb-4">
                       <Calendar className="w-4 h-4 mr-2" />
                       <span className="text-sm font-medium">{event.date} • {event.time}</span>
                     </div>
                     
-                    <h3 className="text-xl md:text-2xl font-display font-bold mb-3 group-hover:text-isclub-blue transition-colors">
+                    <h3 className="text-xl md:text-2xl font-display font-bold mb-3 group-hover:text-isclub-teal transition-colors">
                       {event.title}
                     </h3>
                     
@@ -101,8 +101,8 @@ export default function EventsSection() {
                   <div className="mt-6">
                     <button className={cn(
                       "px-5 py-2 rounded-lg text-sm font-medium",
-                      "bg-isclub-blue-light text-isclub-blue",
-                      "transition-all duration-300 hover:bg-isclub-blue hover:text-white"
+                      "bg-isclub-blue-light text-isclub-teal",
+                      "transition-all duration-300 hover:bg-isclub-teal hover:text-white"
                     )}>
                       Register Now
                     </button>

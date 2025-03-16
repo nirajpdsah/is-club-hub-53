@@ -64,11 +64,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
                 isclub: {
-                    blue: '#3b6aff',
-                    light: '#F6F8FF',
-                    dark: '#18203c',
-                    gray: '#8491A3',
-                    'blue-light': '#DAEAFF'
+                    blue: '#2DD4BF',
+                    teal: '#14B8A6',
+                    cyan: '#06B6D4',
+                    navy: '#0F172A',
+                    light: '#F1F5F9',
+                    dark: '#1E293B',
+                    gray: '#64748B',
+                    'blue-light': '#CCFBF1'
                 }
 			},
 			borderRadius: {
@@ -134,11 +137,11 @@ export default {
                 'mono': ['JetBrains Mono', 'monospace']
             },
             backgroundImage: {
-                'grid-pattern': 'radial-gradient(rgba(56, 94, 255, 0.1) 1px, transparent 1px)',
-                'tech-gradient': 'linear-gradient(to right, rgba(59, 106, 255, 0.8), rgba(59, 106, 255, 0.6))'
+                'grid-pattern': 'radial-gradient(rgba(20, 184, 166, 0.1) 1px, transparent 1px)',
+                'tech-gradient': 'linear-gradient(to right, rgba(20, 184, 166, 0.8), rgba(6, 182, 212, 0.7))'
             },
             boxShadow: {
-                'tech': '0 0 25px rgba(56, 94, 255, 0.2)'
+                'tech': '0 0 25px rgba(20, 184, 166, 0.2)'
             }
 		}
 	},

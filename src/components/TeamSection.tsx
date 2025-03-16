@@ -76,7 +76,7 @@ export default function TeamSection() {
                 
                 <div className="p-6">
                   <h3 className="text-lg font-display font-bold">{member.name}</h3>
-                  <p className="text-isclub-blue text-sm mb-3">{member.role}</p>
+                  <p className="text-isclub-teal text-sm mb-3">{member.role}</p>
                   <p className="text-isclub-gray text-sm">{member.bio}</p>
                 </div>
               </div>

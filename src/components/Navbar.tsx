@@ -45,7 +45,7 @@ export default function Navbar() {
           href="#" 
           className="flex items-center space-x-2 transition-opacity hover:opacity-80"
         >
-          <span className="font-mono text-isclub-blue font-bold text-xl">IS</span>
+          <span className="font-mono text-isclub-teal font-bold text-xl">IS</span>
           <span className="font-mono font-medium text-xl text-isclub-dark">Club</span>
         </a>
 
@@ -55,12 +55,12 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="group flex items-center space-x-1 text-sm font-medium text-isclub-gray hover:text-isclub-blue transition-colors"
+              className="group flex items-center space-x-1 text-sm font-medium text-isclub-gray hover:text-isclub-teal transition-colors"
             >
               <span>{item.icon}</span>
               <span className="inline-block relative">
                 {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-isclub-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-isclub-teal transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </span>
             </a>
           ))}
@@ -95,7 +95,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center space-x-2 text-base font-medium text-isclub-gray hover:text-isclub-blue transition-colors"
+                className="flex items-center space-x-2 text-base font-medium text-isclub-gray hover:text-isclub-teal transition-colors"
               >
                 <span>{item.icon}</span>
                 <span>{item.name}</span>

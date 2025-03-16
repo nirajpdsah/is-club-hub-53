@@ -6,28 +6,28 @@ import { cn } from '@/lib/utils';
 export default function FocusAreasSection() {
   const areas = [
     {
-      icon: <Cpu className="w-12 h-12 mb-6 text-isclub-blue" />,
+      icon: <Cpu className="w-12 h-12 mb-6 text-isclub-teal" />,
       title: "Computing",
       description: "Explore computing fundamentals, hardware essentials, and system architecture principles that form the backbone of modern technology.",
-      color: "from-blue-500/10 to-transparent",
+      color: "from-teal-500/10 to-transparent",
       delay: 0.2
     },
     {
-      icon: <Code className="w-12 h-12 mb-6 text-isclub-blue" />,
+      icon: <Code className="w-12 h-12 mb-6 text-isclub-teal" />,
       title: "Coding",
       description: "Learn programming languages, software development methodologies, and problem-solving techniques for building applications.",
-      color: "from-indigo-500/10 to-transparent",
+      color: "from-cyan-500/10 to-transparent",
       delay: 0.4
     },
     {
-      icon: <BrainCircuit className="w-12 h-12 mb-6 text-isclub-blue" />,
+      icon: <BrainCircuit className="w-12 h-12 mb-6 text-isclub-teal" />,
       title: "Design",
       description: "Master the principles of UI/UX design, visual communication, and create user-centered digital experiences that are both beautiful and functional.",
-      color: "from-purple-500/10 to-transparent",
+      color: "from-blue-500/10 to-transparent",
       delay: 0.6
     },
     {
-      icon: <Database className="w-12 h-12 mb-6 text-isclub-blue" />,
+      icon: <Database className="w-12 h-12 mb-6 text-isclub-teal" />,
       title: "Web Development",
       description: "Develop skills in creating responsive websites and web applications using modern frameworks and development practices.",
       color: "from-sky-500/10 to-transparent",
