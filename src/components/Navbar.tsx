@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, X, Code, GraduationCap, Users, BookOpen } from 'lucide-react';
+import { Menu, X, Code, GraduationCap, Users, BookOpen, Terminal } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
     { name: 'About', href: '#about', icon: <Users className="w-4 h-4" /> },
     { name: 'Focus Areas', href: '#focus-areas', icon: <Code className="w-4 h-4" /> },
     { name: 'Events', href: '#events', icon: <GraduationCap className="w-4 h-4" /> },
-    { name: 'Contact', href: '#contact', icon: <BookOpen className="w-4 h-4" /> },
+    { name: 'Contact', href: '#contact', icon: <Terminal className="w-4 h-4" /> },
   ];
 
   return (
@@ -45,8 +45,8 @@ export default function Navbar() {
           href="#" 
           className="flex items-center space-x-2 transition-opacity hover:opacity-80"
         >
-          <span className="text-isclub-blue font-display font-bold text-xl">IS</span>
-          <span className="font-display font-medium text-xl">Club</span>
+          <span className="font-mono text-isclub-blue font-bold text-xl">IS</span>
+          <span className="font-mono font-medium text-xl text-isclub-dark">Club</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -55,7 +55,7 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="group flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-isclub-blue transition-colors"
+              className="group flex items-center space-x-1 text-sm font-medium text-isclub-gray hover:text-isclub-blue transition-colors"
             >
               <span>{item.icon}</span>
               <span className="inline-block relative">
@@ -73,9 +73,9 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           {isOpen ? (
-            <X className="w-6 h-6 text-gray-700" />
+            <X className="w-6 h-6 text-isclub-gray" />
           ) : (
-            <Menu className="w-6 h-6 text-gray-700" />
+            <Menu className="w-6 h-6 text-isclub-gray" />
           )}
         </button>
       </div>
@@ -95,7 +95,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center space-x-2 text-base font-medium text-gray-700 hover:text-isclub-blue transition-colors"
+                className="flex items-center space-x-2 text-base font-medium text-isclub-gray hover:text-isclub-blue transition-colors"
               >
                 <span>{item.icon}</span>
                 <span>{item.name}</span>

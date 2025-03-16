@@ -1,19 +1,69 @@
 
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Terminal, Code, CircuitBoard } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-isclub-blue-light/40 to-white/5 -z-10"></div>
+      {/* Technical background pattern */}
+      <div className="absolute inset-0 bg-grid-pattern bg-isclub-light -z-10"></div>
       
-      {/* Animated circles */}
+      {/* Animated tech elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/4 left-1/3 w-64 h-64 rounded-full bg-isclub-blue/10 mix-blend-multiply blur-3xl animate-slow-spin"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-blue-300/10 mix-blend-multiply blur-3xl animate-slow-spin animation-delay-2000"></div>
+        <motion.div 
+          animate={{ 
+            y: [0, 20, 0],
+            opacity: [0.5, 0.8, 0.5] 
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity,
+            ease: "easeInOut" 
+          }}
+          className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-isclub-blue/10 blur-3xl"
+        ></motion.div>
+        <motion.div 
+          animate={{ 
+            y: [0, -20, 0],
+            opacity: [0.3, 0.6, 0.3] 
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity,
+            ease: "easeInOut" 
+          }}
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-primary/10 blur-3xl"
+        ></motion.div>
       </div>
+      
+      {/* Tech decorative elements */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="absolute top-20 right-10 hidden lg:block"
+      >
+        <Terminal className="w-16 h-16 text-isclub-blue/20" />
+      </motion.div>
+      
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ delay: 0.7, duration: 1 }}
+        className="absolute bottom-40 left-10 hidden lg:block"
+      >
+        <Code className="w-16 h-16 text-isclub-blue/20" />
+      </motion.div>
+      
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ delay: 0.9, duration: 1 }}
+        className="absolute bottom-20 right-20 hidden lg:block"
+      >
+        <CircuitBoard className="w-16 h-16 text-isclub-blue/20" />
+      </motion.div>
       
       <div className="container mx-auto max-w-5xl">
         <motion.div 
@@ -22,7 +72,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center"
         >
-          <span className="inline-block px-3 py-1 mb-6 text-sm font-medium text-isclub-blue bg-isclub-blue-light/50 rounded-full">
+          <span className="tech-badge mb-6">
             KUSOM Information Systems Club
           </span>
           
@@ -31,7 +81,7 @@ export default function HeroSection() {
             <span className="text-isclub-blue">Innovate.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-isclub-gray max-w-2xl mx-auto mb-10">
             A hub for students eager to explore the vast world of computing, design, coding, and web development.
           </p>
           
@@ -39,10 +89,10 @@ export default function HeroSection() {
             <a
               href="#about"
               className={cn(
-                "px-6 py-3 rounded-lg bg-isclub-blue text-white font-medium",
+                "px-6 py-3 rounded-lg tech-gradient text-white font-medium",
                 "transition-all duration-300 transform hover:translate-y-[-2px]",
-                "shadow-lg shadow-isclub-blue/20 hover:shadow-xl hover:shadow-isclub-blue/30",
-                "focus:outline-none focus:ring-2 focus:ring-isclub-blue/50"
+                "shadow-tech hover:shadow-lg",
+                "focus:outline-none focus:ring-2 focus:ring-primary/50"
               )}
             >
               Discover More
@@ -71,7 +121,7 @@ export default function HeroSection() {
       >
         <a 
           href="#about" 
-          className="flex flex-col items-center text-sm text-gray-500 hover:text-isclub-blue transition-colors"
+          className="flex flex-col items-center text-sm text-isclub-gray hover:text-isclub-blue transition-colors"
         >
           <span className="mb-2">Scroll Down</span>
           <ArrowDown className="w-5 h-5 animate-bounce" />

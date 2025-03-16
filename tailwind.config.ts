@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
                 isclub: {
-                    blue: '#0EA5E9',
-                    light: '#F6F6F7',
-                    dark: '#1A1F2C',
-                    gray: '#8E9196',
-                    'blue-light': '#D3E4FD'
+                    blue: '#3b6aff',
+                    light: '#F6F8FF',
+                    dark: '#18203c',
+                    gray: '#8491A3',
+                    'blue-light': '#DAEAFF'
                 }
 			},
 			borderRadius: {
@@ -112,6 +112,10 @@ export default {
                 'pulse-subtle': {
                     '0%, 100%': { opacity: '1' },
                     '50%': { opacity: '0.8' }
+                },
+                'float': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' }
                 }
 			},
 			animation: {
@@ -121,11 +125,20 @@ export default {
                 'fade-in-up': 'fade-in-up 0.8s ease-out',
                 'fade-in-right': 'fade-in-right 0.8s ease-out',
                 'slow-spin': 'slow-spin 8s linear infinite',
-                'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite'
+                'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+                'float': 'float 6s ease-in-out infinite'
 			},
             fontFamily: {
                 'sans': ['Inter', 'sans-serif'],
-                'display': ['SF Pro Display', 'Inter', 'sans-serif']
+                'display': ['Inter', 'sans-serif'],
+                'mono': ['JetBrains Mono', 'monospace']
+            },
+            backgroundImage: {
+                'grid-pattern': 'radial-gradient(rgba(56, 94, 255, 0.1) 1px, transparent 1px)',
+                'tech-gradient': 'linear-gradient(to right, rgba(59, 106, 255, 0.8), rgba(59, 106, 255, 0.6))'
+            },
+            boxShadow: {
+                'tech': '0 0 25px rgba(56, 94, 255, 0.2)'
             }
 		}
 	},

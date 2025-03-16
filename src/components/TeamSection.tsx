@@ -31,7 +31,7 @@ export default function TeamSection() {
   ];
 
   return (
-    <section className="section-padding bg-gray-50 px-4">
+    <section className="section-padding bg-isclub-light px-4">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -40,13 +40,13 @@ export default function TeamSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-isclub-blue bg-isclub-blue-light/50 rounded-full">
+          <span className="tech-badge mb-4">
             Our Leadership
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
             Meet The Team
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-isclub-gray max-w-2xl mx-auto">
             The IS Club is led by a dedicated team of students passionate about technology and committed to creating valuable learning experiences.
           </p>
         </motion.div>
@@ -62,8 +62,8 @@ export default function TeamSection() {
             >
               <div className={cn(
                 "h-full rounded-xl overflow-hidden",
-                "bg-white border border-gray-100 shadow-sm",
-                "transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                "bg-white/80 backdrop-blur-sm border border-gray-100 shadow-sm",
+                "transition-all duration-300 hover:shadow-tech hover:-translate-y-1"
               )}>
                 <div className="h-60 overflow-hidden">
                   <img 
@@ -77,7 +77,7 @@ export default function TeamSection() {
                 <div className="p-6">
                   <h3 className="text-lg font-display font-bold">{member.name}</h3>
                   <p className="text-isclub-blue text-sm mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                  <p className="text-isclub-gray text-sm">{member.bio}</p>
                 </div>
               </div>
             </motion.div>
