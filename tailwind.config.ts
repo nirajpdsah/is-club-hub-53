@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                isclub: {
+                    blue: '#0EA5E9',
+                    light: '#F6F6F7',
+                    dark: '#1A1F2C',
+                    gray: '#8E9196',
+                    'blue-light': '#D3E4FD'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +92,41 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'fade-in': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' }
+                },
+                'fade-in-up': {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' }
+                },
+                'fade-in-right': {
+                    '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                    '100%': { opacity: '1', transform: 'translateX(0)' }
+                },
+                'slow-spin': {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' }
+                },
+                'pulse-subtle': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.8' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'fade-in': 'fade-in 0.6s ease-out',
+                'fade-in-up': 'fade-in-up 0.8s ease-out',
+                'fade-in-right': 'fade-in-right 0.8s ease-out',
+                'slow-spin': 'slow-spin 8s linear infinite',
+                'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite'
+			},
+            fontFamily: {
+                'sans': ['Inter', 'sans-serif'],
+                'display': ['SF Pro Display', 'Inter', 'sans-serif']
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
