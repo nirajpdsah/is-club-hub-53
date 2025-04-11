@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -43,6 +42,15 @@ export default function EventsSection() {
       location: "KUSOM Main Hall",
       description: "Our flagship event featuring industry speakers, tech showcases, and networking opportunities.",
       imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+    },
+    {
+      id: "ai-bootcamp",
+      title: "AI Innovation Bootcamp",
+      date: "August 1, 2025",
+      time: "9:00 AM - 5:00 PM",
+      location: "KUSOM Innovation Lab",
+      description: "A comprehensive one-day bootcamp exploring the latest developments in Artificial Intelligence and its applications.",
+      imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcc9e20d"
     }
   ];
 

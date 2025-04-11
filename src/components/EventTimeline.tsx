@@ -1,36 +1,56 @@
-
 import { motion } from 'framer-motion';
-import { Calendar, Clock, MapPin } from 'lucide-react';
+import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const events = [
   {
-    title: "Web Development Workshop",
-    date: "April 20, 2025",
-    time: "2:00 PM - 5:00 PM",
-    location: "KUSOM Tech Lab",
-    description: "Learn the fundamentals of modern web development with HTML, CSS, and JavaScript."
+    id: "web-dev-workshop",
+    title: "VR Experience Session",
+    date: "April 18, 2025",
+    time: "TBD",
+    location: "KUSOM",
+    description: "Explore the world of virtual reality.",
+    imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
   },
   {
-    title: "Design Thinking Seminar",
-    date: "May 12, 2025",
-    time: "1:00 PM - 3:30 PM",
-    location: "KUSOM Auditorium",
-    description: "A comprehensive workshop on applying design thinking principles to business problems."
+    id: "design-thinking",
+    title: "Business Hackathon",
+    date: "May 23-25, 2025",
+    time: "48 Hours",
+    location: "Multipurpose Hall, KU",
+    description: "A 48-hour hackathon event where participants will work in teams to develop innovative business solutions.",
+    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
   },
   {
-    title: "Annual Tech Symposium",
-    date: "June 10, 2025",
-    time: "9:00 AM - 4:00 PM",
-    location: "KUSOM Main Hall",
-    description: "Our flagship event featuring industry speakers, tech showcases, and networking opportunities."
+    id: "tech-symposium",
+    title: "IS Fair",
+    date: "June 22-27, 2025",
+    time: "All Day",
+    location: "KUSOM",
+    description: "A fair where students can showcase their projects and ideas.",
+    imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+  },
+  {
+    id: "ai-bootcamp",
+    title: "AI Innovation Bootcamp",
+    date: "August 1, 2025",
+    time: "TBD",
+    location: "KUSOM",
+    description: "A 1 day bootcamp on AI and its applications.",
+    imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcc9e20d"
   }
 ];
 
 export default function EventTimeline() {
   return (
-    <section className="section-padding bg-gradient-to-b from-white to-isclub-blue-light/30 px-4">
-      <div className="container mx-auto max-w-4xl">
+    <section className="section-padding px-4 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.03)_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-teal-50/20 to-isclub-teal/10"></div>
+      
+      <div className="container mx-auto max-w-4xl relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +58,7 @@ export default function EventTimeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-isclub-teal bg-isclub-blue-light/50 rounded-full">
+          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-emerald-600 bg-white/80 backdrop-blur-sm rounded-full border border-emerald-200">
             Coming Up
           </span>
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
@@ -51,7 +71,7 @@ export default function EventTimeline() {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-isclub-teal/30 z-0"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-emerald-200/50 to-emerald-100/30 z-0"></div>
           
           {/* Timeline events */}
           <div className="space-y-16">
@@ -68,11 +88,11 @@ export default function EventTimeline() {
                 )}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-isclub-teal rounded-full border-4 border-white shadow-sm"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white shadow-sm"></div>
                 
                 {/* Content card */}
                 <div className={cn(
-                  "w-5/12 glass-card rounded-xl p-6 hover-lift cyber-border",
+                  "w-5/12 bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-emerald-100 shadow-md hover:shadow-lg transition-all duration-300",
                   index % 2 === 0 ? "mr-auto" : "ml-auto"
                 )}>
                   <div>
@@ -97,6 +117,16 @@ export default function EventTimeline() {
                         <MapPin className="w-3.5 h-3.5 mr-2 text-isclub-teal" />
                         <span>{event.location}</span>
                       </div>
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t border-emerald-50">
+                      <Link 
+                        to={`/events/${event.id}`}
+                        className="inline-flex items-center text-sm text-emerald-600 hover:text-emerald-700 transition-colors"
+                      >
+                        See More Details
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link>
                     </div>
                   </div>
                 </div>

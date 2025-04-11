@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/Navbar';
 import EventDetail from '@/components/EventDetail';
 import Footer from '@/components/Footer';
@@ -126,6 +125,62 @@ const events = [
         name: "Mark Anderson",
         role: "Startup Founder & Tech Entrepreneur",
         imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+      }
+    ]
+  },
+  {
+    id: "ai-bootcamp",
+    title: "AI Innovation Bootcamp",
+    date: "August 1, 2025",
+    time: "9:00 AM - 5:00 PM",
+    location: "KUSOM Innovation Lab",
+    description: "A comprehensive one-day bootcamp exploring the latest developments in Artificial Intelligence and its applications.",
+    imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcc9e20d",
+    longDescription: `
+      Join us for an intensive one-day bootcamp focused on Artificial Intelligence and its transformative impact across industries. 
+      This event is designed to provide both theoretical knowledge and practical experience in AI technologies.
+      
+      Through hands-on workshops, expert-led sessions, and real-world case studies, participants will gain insights into:
+      - Machine Learning fundamentals and applications
+      - Natural Language Processing and its business uses
+      - Computer Vision and image recognition
+      - Ethical considerations in AI development
+      - AI implementation strategies for businesses
+      
+      Whether you're a student, professional, or entrepreneur, this bootcamp will equip you with valuable knowledge and skills 
+      to navigate the AI landscape and leverage its potential in your field.
+    `,
+    targetAudience: "Students, professionals, and entrepreneurs interested in AI and its applications across various industries.",
+    prerequisites: [
+      "Basic understanding of programming concepts",
+      "Laptop with Python installed (we'll provide setup instructions)",
+      "Curiosity and enthusiasm for AI technology"
+    ],
+    schedule: [
+      { time: "9:00 AM", activity: "Registration & Welcome" },
+      { time: "9:30 AM", activity: "Introduction to AI & Machine Learning" },
+      { time: "11:00 AM", activity: "Hands-on ML Workshop" },
+      { time: "12:30 PM", activity: "Lunch & Networking" },
+      { time: "1:30 PM", activity: "NLP & Computer Vision Applications" },
+      { time: "3:00 PM", activity: "Coffee Break" },
+      { time: "3:30 PM", activity: "AI Ethics & Implementation Strategies" },
+      { time: "4:30 PM", activity: "Q&A and Closing Remarks" }
+    ],
+    speakers: [
+      {
+        name: "Dr. Sarah Chen",
+        role: "AI Research Lead at TechInnovate",
+        imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"
+      },
+      {
+        name: "Alex Kumar",
+        role: "Machine Learning Engineer",
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+      },
+      {
+        name: "Dr. Emily Park",
+        role: "AI Ethics Specialist",
+        imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956"
       }
     ]
   }
