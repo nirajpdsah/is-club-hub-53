@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Menu, X, Code, GraduationCap, Users, BookOpen, Terminal } from 'lucide-react';
+import { Menu, X, Info, Code, Calendar, Users, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
@@ -23,13 +23,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigation items
+  // Navigation items with updated icons
   const navItems = [
-    { name: 'About', href: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'About', href: '/about', icon: <Info className="w-4 h-4" /> },
     { name: 'Focus Areas', href: '/focus-areas', icon: <Code className="w-4 h-4" /> },
-    { name: 'Events', href: '/events', icon: <GraduationCap className="w-4 h-4" /> },
-    { name: 'Team', href: '/team', icon: <BookOpen className="w-4 h-4" /> },
-    { name: 'Contact', href: '/contact', icon: <Terminal className="w-4 h-4" /> },
+    { name: 'Events', href: '/events', icon: <Calendar className="w-4 h-4" /> },
+    { name: 'Team', href: '/team', icon: <Users className="w-4 h-4" /> },
+    { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> },
   ];
 
   return (

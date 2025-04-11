@@ -1,11 +1,24 @@
 
 import { motion } from 'framer-motion';
-import { Calendar } from 'lucide-react';
+import { Calendar, MapPin, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
+
+// Define event type for better type safety
+type Event = {
+  id: string;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+  imageUrl: string;
+};
 
 export default function EventsSection() {
-  const events = [
+  const events: Event[] = [
     {
+      id: "web-dev-workshop",
       title: "Web Development Workshop",
       date: "October 15, 2023",
       time: "2:00 PM - 5:00 PM",
@@ -14,6 +27,7 @@ export default function EventsSection() {
       imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
     },
     {
+      id: "design-thinking",
       title: "Design Thinking Seminar",
       date: "November 5, 2023",
       time: "1:00 PM - 3:30 PM",
@@ -22,6 +36,7 @@ export default function EventsSection() {
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     },
     {
+      id: "tech-symposium",
       title: "Annual Tech Symposium",
       date: "December 10, 2023",
       time: "9:00 AM - 4:00 PM",
@@ -55,7 +70,7 @@ export default function EventsSection() {
         <div className="space-y-12">
           {events.map((event, index) => (
             <motion.div 
-              key={event.title}
+              key={event.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -93,17 +108,31 @@ export default function EventsSection() {
                       {event.description}
                     </p>
                     
-                    <div className="text-sm text-gray-500">
-                      <span className="font-medium">Location:</span> {event.location}
+                    <div className="text-sm text-gray-500 flex items-center">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      <span className="font-medium">{event.location}</span>
                     </div>
                   </div>
                   
-                  <div className="mt-6">
-                    <button className={cn(
-                      "px-5 py-2 rounded-lg text-sm font-medium",
-                      "bg-isclub-blue-light text-isclub-teal",
-                      "transition-all duration-300 hover:bg-isclub-teal hover:text-white"
-                    )}>
+                  <div className="mt-6 flex gap-4 items-center">
+                    <Link 
+                      to={`/events/${event.id}`}
+                      className={cn(
+                        "px-5 py-2 rounded-lg text-sm font-medium",
+                        "bg-isclub-teal text-white",
+                        "transition-all duration-300 hover:bg-isclub-navy"
+                      )}
+                    >
+                      Learn More
+                    </Link>
+                    
+                    <button 
+                      className={cn(
+                        "px-5 py-2 rounded-lg text-sm font-medium",
+                        "bg-isclub-blue-light text-isclub-teal",
+                        "transition-all duration-300 hover:bg-isclub-blue-light/70"
+                      )}
+                    >
                       Register Now
                     </button>
                   </div>

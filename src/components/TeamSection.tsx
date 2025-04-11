@@ -1,37 +1,158 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { Users, Code, Calendar, Paintbrush } from 'lucide-react';
+
+type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+  imageUrl: string;
+  section: 'board' | 'technical' | 'events' | 'creative';
+};
 
 export default function TeamSection() {
-  const team = [
+  const teamMembers: TeamMember[] = [
+    // Board Members
     {
       name: "Alex Chen",
       role: "President",
       bio: "Computer Science senior with expertise in full-stack development and project management.",
       imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      section: 'board'
     },
     {
       name: "Maya Johnson",
       role: "Vice President",
       bio: "Information Systems junior focusing on UX/UI design and user research methodologies.",
       imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      section: 'board'
     },
+    {
+      name: "Priya Sharma",
+      role: "General Secretary",
+      bio: "Business Analytics student with a strong background in data visualization and reporting.",
+      imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      section: 'board'
+    },
+    {
+      name: "William Park",
+      role: "Treasurer",
+      bio: "Finance major with experience managing budgets for student organizations.",
+      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      section: 'board'
+    },
+    
+    // Technical Team
     {
       name: "Jordan Taylor",
       role: "Tech Lead",
       bio: "Computer Engineering senior specializing in software architecture and cloud technologies.",
       imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      section: 'technical'
     },
     {
-      name: "Samira Patel",
+      name: "Aisha Patel",
+      role: "Web Developer",
+      bio: "Self-taught developer with a passion for creating accessible web experiences.",
+      imageUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+      section: 'technical'
+    },
+    {
+      name: "Kevin Wu",
+      role: "Mobile App Developer",
+      bio: "Computer Science student focusing on cross-platform mobile application development.",
+      imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      section: 'technical'
+    },
+    {
+      name: "Lily Zhang",
+      role: "UI/UX Designer",
+      bio: "Digital Media student with expertise in user interface and experience design.",
+      imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+      section: 'technical'
+    },
+    
+    // Events Team
+    {
+      name: "Samira Khan",
       role: "Events Coordinator",
-      bio: "Marketing major with a passion for bringing people together through meaningful tech events.",
-      imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      bio: "Marketing major with a passion for organizing impactful events and community building.",
+      imageUrl: "https://images.unsplash.com/photo-1541787457429-b1766a4766b6",
+      section: 'events'
+    },
+    {
+      name: "Marcus Johnson",
+      role: "Logistics Manager",
+      bio: "Operations Management student skilled in event planning and resource coordination.",
+      imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+      section: 'events'
+    },
+    {
+      name: "Sophia Rodriguez",
+      role: "Partnerships Lead",
+      bio: "Business Administration junior focused on building corporate relationships and sponsorships.",
+      imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e",
+      section: 'events'
+    },
+    {
+      name: "Omar Hassan",
+      role: "Workshop Facilitator",
+      bio: "Education major with experience in creating engaging learning experiences.",
+      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      section: 'events'
+    },
+    
+    // Creative Team
+    {
+      name: "Emma Wilson",
+      role: "Creative Director",
+      bio: "Graphic Design senior specializing in branding and visual communication.",
+      imageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      section: 'creative'
+    },
+    {
+      name: "Daniel Lee",
+      role: "Content Creator",
+      bio: "Digital Media student with skills in photography, videography, and storytelling.",
+      imageUrl: "https://images.unsplash.com/photo-1463453091185-61582044d556",
+      section: 'creative'
+    },
+    {
+      name: "Isabella Garcia",
+      role: "Social Media Manager",
+      bio: "Marketing Communications student focused on digital engagement and community building.",
+      imageUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604",
+      section: 'creative'
+    },
+    {
+      name: "Ryan Thompson",
+      role: "Graphic Designer",
+      bio: "Visual Arts major with expertise in digital illustration and motion graphics.",
+      imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      section: 'creative'
     }
   ];
 
-  return (
-    <section className="section-padding bg-isclub-light px-4">
+  const boardMembers = teamMembers.filter(member => member.section === 'board');
+  const technicalTeam = teamMembers.filter(member => member.section === 'technical');
+  const eventsTeam = teamMembers.filter(member => member.section === 'events');
+  const creativeTeam = teamMembers.filter(member => member.section === 'creative');
+
+  const TeamSection = ({ 
+    title, 
+    icon, 
+    description, 
+    members, 
+    bgColor = "bg-isclub-light" 
+  }: { 
+    title: string; 
+    icon: React.ReactNode; 
+    description: string; 
+    members: TeamMember[]; 
+    bgColor?: string;
+  }) => (
+    <section className={`section-padding ${bgColor} px-4`}>
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -40,19 +161,20 @@ export default function TeamSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="tech-badge mb-4">
-            Our Leadership
+          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-isclub-teal bg-isclub-blue-light/50 rounded-full flex items-center justify-center mx-auto w-fit">
+            {icon}
+            <span className="ml-2">{title}</span>
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-            Meet The Team
+            {title}
           </h2>
           <p className="text-isclub-gray max-w-2xl mx-auto">
-            The IS Club is led by a dedicated team of students passionate about technology and committed to creating valuable learning experiences.
+            {description}
           </p>
         </motion.div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
+          {members.map((member, index) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 20 }}
@@ -85,5 +207,41 @@ export default function TeamSection() {
         </div>
       </div>
     </section>
+  );
+
+  return (
+    <>
+      <TeamSection 
+        title="Board Members" 
+        icon={<Users className="w-4 h-4" />}
+        description="The IS Club is led by a dedicated team of student officers who oversee all club operations and strategic direction."
+        members={boardMembers}
+        bgColor="bg-isclub-light"
+      />
+      
+      <TeamSection 
+        title="Technical Team" 
+        icon={<Code className="w-4 h-4" />}
+        description="Our technical team develops and maintains club technologies, websites, and provides expertise for workshops and projects."
+        members={technicalTeam}
+        bgColor="bg-white"
+      />
+      
+      <TeamSection 
+        title="Events Team" 
+        icon={<Calendar className="w-4 h-4" />}
+        description="The events team plans, organizes, and executes all club activities, from workshops to networking sessions and annual symposiums."
+        members={eventsTeam}
+        bgColor="bg-isclub-light"
+      />
+      
+      <TeamSection 
+        title="Creative Team" 
+        icon={<Paintbrush className="w-4 h-4" />}
+        description="Our creative team handles all aspects of club branding, design, content creation, and social media presence."
+        members={creativeTeam}
+        bgColor="bg-white"
+      />
+    </>
   );
 }
