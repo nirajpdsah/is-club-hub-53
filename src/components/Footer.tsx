@@ -1,4 +1,5 @@
 
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function Footer() {
@@ -42,34 +43,43 @@ export default function Footer() {
             <h3 className="font-medium text-lg mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-gray-400 hover:text-isclub-teal transition-colors">About Us</a>
+                <a href="/about" className="text-gray-400 hover:text-isclub-teal transition-colors">About Us</a>
               </li>
               <li>
-                <a href="#focus-areas" className="text-gray-400 hover:text-isclub-teal transition-colors">Focus Areas</a>
+                <a href="/focus-areas" className="text-gray-400 hover:text-isclub-teal transition-colors">Focus Areas</a>
               </li>
               <li>
-                <a href="#events" className="text-gray-400 hover:text-isclub-teal transition-colors">Events</a>
+                <a href="/events" className="text-gray-400 hover:text-isclub-teal transition-colors">Events</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-isclub-teal transition-colors">Contact</a>
+                <a href="/contact" className="text-gray-400 hover:text-isclub-teal transition-colors">Contact</a>
               </li>
             </ul>
           </div>
           
+          {/* Contact Information */}
           <div>
-            <h3 className="font-medium text-lg mb-4">Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-isclub-teal transition-colors">Blog</a>
+            <h3 className="font-medium text-lg mb-4">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <MapPin className="w-5 h-5 text-isclub-teal mt-0.5 mr-3 flex-shrink-0" />
+                <span className="text-gray-400">
+                  Kathmandu University School of Management<br />
+                  Balkumari, Lalitpur<br />
+                  Nepal
+                </span>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-isclub-teal transition-colors">Tutorials</a>
+              <li className="flex items-center">
+                <Phone className="w-5 h-5 text-isclub-teal mr-3 flex-shrink-0" />
+                <a href="tel:+97701234567" className="text-gray-400 hover:text-isclub-teal transition-colors">
+                  +977 01-234567
+                </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-isclub-teal transition-colors">Projects</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-isclub-teal transition-colors">Resources</a>
+              <li className="flex items-center">
+                <Mail className="w-5 h-5 text-isclub-teal mr-3 flex-shrink-0" />
+                <a href="mailto:isclub@kusom.edu.np" className="text-gray-400 hover:text-isclub-teal transition-colors">
+                  isclub@kusom.edu.np
+                </a>
               </li>
             </ul>
           </div>
