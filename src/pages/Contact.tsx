@@ -1,19 +1,20 @@
 
-import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
-const Index = () => {
+const Contact = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main>
-        <HeroSection />
+        <div className="pt-24">
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Contact;

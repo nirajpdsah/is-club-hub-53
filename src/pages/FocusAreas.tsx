@@ -1,19 +1,20 @@
 
-import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
+import FocusAreasSection from '@/components/FocusAreasSection';
 import Footer from '@/components/Footer';
 
-const Index = () => {
+const FocusAreas = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main>
-        <HeroSection />
+        <div className="pt-24">
+          <FocusAreasSection />
+        </div>
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default FocusAreas;

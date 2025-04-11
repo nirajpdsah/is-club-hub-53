@@ -120,6 +120,40 @@
   .tech-badge {
     @apply inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-md;
   }
+
+  .cyber-border {
+    @apply relative;
+  }
+
+  .cyber-border::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-75 transition-opacity;
+  }
+
+  .cyber-border:hover::before {
+    @apply opacity-100;
+  }
+
+  .cyber-border > * {
+    @apply relative bg-white rounded-lg;
+  }
+  
+  .tech-dot-grid {
+    background-image: radial-gradient(rgba(20, 184, 166, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .cyber-button {
+    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-mono font-medium tracking-tighter text-white bg-gray-800 rounded-lg group;
+  }
+  
+  .cyber-button:hover .cyber-button-glitch {
+    @apply opacity-100;
+  }
+  
+  .cyber-button-glitch {
+    @apply absolute inset-0 opacity-0 bg-gradient-to-r from-cyan-400 to-purple-500 transition-opacity flex items-center justify-center rounded-lg;
+  }
 }
 
 /* Custom animations and transitions */
@@ -138,6 +172,52 @@
 .tech-pattern {
   background-image: radial-gradient(rgba(20, 184, 166, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+/* Cyberpunk glitch effect */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.glitch-text {
+  position: relative;
+  animation: glitch 1s infinite;
+  animation-play-state: paused;
+}
+
+.glitch-text:hover {
+  animation-play-state: running;
+}
+
+/* Futuristic circuit animation */
+@keyframes circuit-pulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.circuit-animate {
+  animation: circuit-pulse 4s infinite;
 }
 
 /* Improved text rendering */

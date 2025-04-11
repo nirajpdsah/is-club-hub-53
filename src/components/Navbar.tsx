@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X, Code, GraduationCap, Users, BookOpen, Terminal } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -24,10 +25,11 @@ export default function Navbar() {
 
   // Navigation items
   const navItems = [
-    { name: 'About', href: '#about', icon: <Users className="w-4 h-4" /> },
-    { name: 'Focus Areas', href: '#focus-areas', icon: <Code className="w-4 h-4" /> },
-    { name: 'Events', href: '#events', icon: <GraduationCap className="w-4 h-4" /> },
-    { name: 'Contact', href: '#contact', icon: <Terminal className="w-4 h-4" /> },
+    { name: 'About', href: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'Focus Areas', href: '/focus-areas', icon: <Code className="w-4 h-4" /> },
+    { name: 'Events', href: '/events', icon: <GraduationCap className="w-4 h-4" /> },
+    { name: 'Team', href: '/team', icon: <BookOpen className="w-4 h-4" /> },
+    { name: 'Contact', href: '/contact', icon: <Terminal className="w-4 h-4" /> },
   ];
 
   return (
@@ -41,20 +43,20 @@ export default function Navbar() {
     >
       <div className="container px-4 mx-auto flex items-center justify-between">
         {/* Logo */}
-        <a 
-          href="#" 
+        <Link 
+          to="/" 
           className="flex items-center space-x-2 transition-opacity hover:opacity-80"
         >
           <span className="font-mono text-isclub-teal font-bold text-xl">IS</span>
           <span className="font-mono font-medium text-xl text-isclub-dark">Club</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="group flex items-center space-x-1 text-sm font-medium text-isclub-gray hover:text-isclub-teal transition-colors"
             >
               <span>{item.icon}</span>
@@ -62,7 +64,7 @@ export default function Navbar() {
                 {item.name}
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-isclub-teal transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -91,15 +93,15 @@ export default function Navbar() {
         >
           <div className="container px-4 mx-auto py-4 space-y-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 onClick={() => setIsOpen(false)}
                 className="flex items-center space-x-2 text-base font-medium text-isclub-gray hover:text-isclub-teal transition-colors"
               >
                 <span>{item.icon}</span>
                 <span>{item.name}</span>
-              </a>
+              </Link>
             ))}
           </div>
         </motion.div>
