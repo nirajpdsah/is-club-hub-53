@@ -15,61 +15,75 @@ export default function TeamSection() {
   const teamMembers: TeamMember[] = [
     // Board Members
     {
-      name: "Alex Chen",
-      role: "President",
-      bio: "Computer Science senior with expertise in full-stack development and project management.",
-      imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      name: "Unique Poudel",
+      role: "Coordinator",
+      bio: "Second year BBIS student with expertise in social media management and leadership.",
+      imageUrl: "members photos/Unique Poudel(Coordinator).jpg",
       section: 'board'
     },
     {
-      name: "Maya Johnson",
-      role: "Vice President",
-      bio: "Information Systems junior focusing on UX/UI design and user research methodologies.",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      name: "Resha Pokharel",
+      role: "Vice Coordinator",
+      bio: "Second year BBIS student focusing on web development and design.",
+      imageUrl: "members photos/Resha Pokheral (vice Coordinator).jpg",
       section: 'board'
     },
     {
-      name: "Priya Sharma",
-      role: "General Secretary",
-      bio: "Business Analytics student with a strong background in data visualization and reporting.",
-      imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      name: "Niraj Prasad Sah",
+      role: "Secretary",
+      bio: "Second year BBIS student with a passion for programming and project/product management.",
+      imageUrl: "members photos/Niraj Prasad Sah (Secretary).jpg",
       section: 'board'
     },
     {
-      name: "William Park",
+      name: "Gunjan Suwal",
       role: "Treasurer",
-      bio: "Finance major with experience managing budgets for student organizations.",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      bio: "Second year BBIS student with experience in managing budgets for student organizations.",
+      imageUrl: "members photos/Gunjan Suwal (Treasurer).jpg",
+      section: 'board'
+    },
+    {
+      name: "Sumina Rai",
+      role: "Joint Secretary",
+      bio: "Second year BBIS student with experience in administration and coordination.",
+      imageUrl: "members photos/Sumina Rai(joint secretary).jpg",
+      section: 'board'
+    },
+    {
+      name: "Samyog Karki",
+      role: "Joint Treasurer",
+      bio: "Second year BBIS student who is passionate about finance and leadership.",
+      imageUrl: "members photos/Samyog Karki (Joint Treasurer).jpg",
       section: 'board'
     },
     
     // Technical Team
     {
-      name: "Jordan Taylor",
-      role: "Tech Lead",
-      bio: "Computer Engineering senior specializing in software architecture and cloud technologies.",
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      name: "Oman Chaudhary",
+      role: "Technical Head",
+      bio: "Second year BBIS student who is passionate about technology and leadership.",
+      imageUrl: "members photos/Oman Chaudhary (Technical Head).JPG",
       section: 'technical'
     },
     {
-      name: "Aisha Patel",
-      role: "Web Developer",
-      bio: "Self-taught developer with a passion for creating accessible web experiences.",
-      imageUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+      name: "Sandesh Shrestha",
+      role: "Technical Team Member",
+      bio: "Second year BBIS student who is a self-taught developer with a passion for creating accessible web experiences.",
+      imageUrl: "members photos/Sandesh Shrestha (Technical Team Member).jpg",
       section: 'technical'
     },
     {
-      name: "Kevin Wu",
-      role: "Mobile App Developer",
-      bio: "Computer Science student focusing on cross-platform mobile application development.",
-      imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      name: "Sabina Shrestha",
+      role: "Technical Team Member",
+      bio: "Second year BBIS student focusing on vibe coding and web development.",
+      imageUrl: "members photos/Sabina Shrestha(Technical Team Member).jpg",
       section: 'technical'
     },
     {
-      name: "Lily Zhang",
-      role: "UI/UX Designer",
-      bio: "Digital Media student with expertise in user interface and experience design.",
-      imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+      name: "Evan Karmacharya",
+      role: "Technical Team Member",
+      bio: "First year BBIS student who has a strong craving for knowledge.",
+      imageUrl: "members photos/Evan Karmacharya (Technical team member).jpg",
       section: 'technical'
     },
     
