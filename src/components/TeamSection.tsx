@@ -18,7 +18,7 @@ export default function TeamSection() {
       name: "Unique Poudel",
       role: "Coordinator",
       bio: "Second year BBIS student with expertise in social media management and leadership.",
-      imageUrl: "public/members photos/Unique Poudel(Coordinator).jpg",
+      imageUrl: "public/members/Unique.jpg",
       section: 'board'
     },
     {
