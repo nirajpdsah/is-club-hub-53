@@ -18,42 +18,42 @@ export default function TeamSection() {
       name: "Unique Poudel",
       role: "Coordinator",
       bio: "Second year BBIS student with expertise in social media management and leadership.",
-      imageUrl: "members photos/Unique Poudel(Coordinator).jpg",
+      imageUrl: "public/members photos/Unique Poudel(Coordinator).jpg",
       section: 'board'
     },
     {
       name: "Resha Pokharel",
       role: "Vice Coordinator",
       bio: "Second year BBIS student focusing on web development and design.",
-      imageUrl: "members photos/Resha Pokheral (vice Coordinator).jpg",
+      imageUrl: "public/members photos/Resha Pokheral (vice Coordinator).jpg",
       section: 'board'
     },
     {
       name: "Niraj Prasad Sah",
       role: "Secretary",
       bio: "Second year BBIS student with a passion for programming and project/product management.",
-      imageUrl: "members photos/Niraj Prasad Sah (Secretary).jpg",
+      imageUrl: "public/members photos/Niraj Prasad Sah (Secretary).jpg",
       section: 'board'
     },
     {
       name: "Gunjan Suwal",
       role: "Treasurer",
       bio: "Second year BBIS student with experience in managing budgets for student organizations.",
-      imageUrl: "members photos/Gunjan Suwal (Treasurer).jpg",
+      imageUrl: "public/members photos/Gunjan Suwal (Treasurer).jpg",
       section: 'board'
     },
     {
       name: "Sumina Rai",
       role: "Joint Secretary",
       bio: "Second year BBIS student with experience in administration and coordination.",
-      imageUrl: "members photos/Sumina Rai(joint secretary).jpg",
+      imageUrl: "public/members photos/Sumina Rai(joint secretary).jpg",
       section: 'board'
     },
     {
       name: "Samyog Karki",
       role: "Joint Treasurer",
       bio: "Second year BBIS student who is passionate about finance and leadership.",
-      imageUrl: "members photos/Samyog Karki (Joint Treasurer).jpg",
+      imageUrl: "public/members photos/Samyog Karki (Joint Treasurer).jpg",
       section: 'board'
     },
     
@@ -62,28 +62,28 @@ export default function TeamSection() {
       name: "Oman Chaudhary",
       role: "Technical Head",
       bio: "Second year BBIS student who is passionate about technology and leadership.",
-      imageUrl: "members photos/Oman Chaudhary (Technical Head).JPG",
+      imageUrl: "public/members photos/Oman Chaudhary (Technical Head).JPG",
       section: 'technical'
     },
     {
       name: "Sandesh Shrestha",
       role: "Technical Team Member",
       bio: "Second year BBIS student who is a self-taught developer with a passion for creating accessible web experiences.",
-      imageUrl: "members photos/Sandesh Shrestha (Technical Team Member).jpg",
+      imageUrl: "public/members photos/Sandesh Shrestha (Technical Team Member).jpg",
       section: 'technical'
     },
     {
       name: "Sabina Shrestha",
       role: "Technical Team Member",
       bio: "Second year BBIS student focusing on vibe coding and web development.",
-      imageUrl: "members photos/Sabina Shrestha(Technical Team Member).jpg",
+      imageUrl: "public/members photos/Sabina Shrestha(Technical Team Member).jpg",
       section: 'technical'
     },
     {
       name: "Evan Karmacharya",
       role: "Technical Team Member",
       bio: "First year BBIS student who has a strong craving for knowledge.",
-      imageUrl: "members photos/Evan Karmacharya (Technical team member).jpg",
+      imageUrl: "public/members photos/Evan Karmacharya (Technical team member).jpg",
       section: 'technical'
     },
     
