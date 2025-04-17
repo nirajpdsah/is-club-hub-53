@@ -89,61 +89,96 @@ export default function TeamSection() {
     
     // Events Team
     {
-      name: "Samira Khan",
-      role: "Events Coordinator",
-      bio: "Marketing major with a passion for organizing impactful events and community building.",
-      imageUrl: "https://images.unsplash.com/photo-1541787457429-b1766a4766b6",
+      name: "Yogyansh Shah",
+      role: "Events Head",
+      bio: "Second year BBIS student who is passionate about events coordination and leadership.",
+      imageUrl: "https://i.imgur.com/rDodEHh.jpeg",
       section: 'events'
     },
     {
-      name: "Marcus Johnson",
-      role: "Logistics Manager",
-      bio: "Operations Management student skilled in event planning and resource coordination.",
-      imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+      name: "Swikriti Sapkota",
+      role: "Events Team Member",
+      bio: "Second year BBIS student with experience in event planning and management.",
+      imageUrl: "https://i.imgur.com/w2RGe8P.jpeg",
       section: 'events'
     },
     {
-      name: "Sophia Rodriguez",
-      role: "Partnerships Lead",
-      bio: "Business Administration junior focused on building corporate relationships and sponsorships.",
-      imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e",
+      name: "Aachal Regmi",
+      role: "Events Team Member",
+      bio: "Second year BBIS student with a passion for organizing and executing events.",
+      imageUrl: "https://i.imgur.com/UtpUgDz.jpeg",
       section: 'events'
     },
     {
-      name: "Omar Hassan",
-      role: "Workshop Facilitator",
-      bio: "Education major with experience in creating engaging learning experiences.",
-      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      name: "Sumit Timalsina",
+      role: "Events Team Member",
+      bio: "First year BBIS student with a strong interest in event management and coordination.",
+      imageUrl: "https://i.imgur.com/YmHZgcf.jpeg",
+      section: 'events'
+    },
+    {
+      name: "Pratikshya Sapkota",
+      role: "Events Team Member",
+      bio: "Second year BBIS student with a passion for event planning and execution.",
+      imageUrl: "https://i.imgur.com/4G4ke9E.jpeg",
+      section: 'events'
+    },
+    {
+      name: "Rija Shrestha",
+      role: "Events Team Member",
+      bio: "First year BBIS student with a strong interest in event management and coordination.",
+      imageUrl: "https://i.imgur.com/QPS21uB.jpeg",
+      section: 'events'
+    },
+    {
+      name: "Palpasa Shrestha",
+      role: "Events Team Member",
+      bio: "First year BBIS student with a strong interest in event management and coordination.",
+      imageUrl: "https://i.imgur.com/JKYLCOz.jpeg",
+      section: 'events'
+    },
+    {
+      name: "Nikita Shrestha",
+      role: "Events Team Member",
+      bio: "First year BBIS student with a strong interest in event management and coordination.",
+      imageUrl: "https://i.imgur.com/u4exiCs.jpeg",
       section: 'events'
     },
     
     // Creative Team
     {
-      name: "Emma Wilson",
-      role: "Creative Director",
-      bio: "Graphic Design senior specializing in branding and visual communication.",
+      name: "Anusha Tuladhar",
+      role: "Creative Head",
+      bio: "Second year BBIS student with a passion for design and creativity.",
       imageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
       section: 'creative'
     },
     {
-      name: "Daniel Lee",
-      role: "Content Creator",
-      bio: "Digital Media student with skills in photography, videography, and storytelling.",
-      imageUrl: "https://images.unsplash.com/photo-1463453091185-61582044d556",
+      name: "Sriya Adhikari",
+      role: "Creative Team Member",
+      bio: "First year BBIS student with a strong interest in graphic design and branding and also 3.55 GPA Holder in first semester.",
+      imageUrl: "https://i.imgur.com/puOU4BE.jpeg",
       section: 'creative'
     },
     {
-      name: "Isabella Garcia",
-      role: "Social Media Manager",
-      bio: "Marketing Communications student focused on digital engagement and community building.",
-      imageUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604",
+      name: "Nimisha Regmi",
+      role: "Creative Team Member",
+      bio: "Second year BBIS student with a strong interest in graphic design and branding.",
+      imageUrl: "https://i.imgur.com/6wRonmA.jpeg",
       section: 'creative'
     },
     {
-      name: "Ryan Thompson",
-      role: "Graphic Designer",
-      bio: "Visual Arts major with expertise in digital illustration and motion graphics.",
+      name: "Binayak Koirala",
+      role: "Creative Team Member",
+      bio: "First year BBIS student with a strong interest in graphic design and branding.",
       imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      section: 'creative'
+    },
+    {
+      name: "Mahima Maharjan",
+      role: "Creative Team Member",
+      bio: "Second year BBIS student with a strong interest in graphic design and branding.",
+      imageUrl: "https://i.imgur.com/trbZFoi.jpeg",
       section: 'creative'
     }
   ];
