@@ -156,7 +156,7 @@ export default function TeamSection() {
     {
       name: "Sriya Adhikari",
       role: "Creative Team Member",
-      bio: "First year BBIS student with a strong interest in graphic design and branding and also 3.55 GPA Holder in first semester.",
+      bio: "First year BBIS student with a strong interest in graphic design and branding.",
       imageUrl: "https://i.imgur.com/puOU4BE.jpeg",
       section: 'creative'
     },
