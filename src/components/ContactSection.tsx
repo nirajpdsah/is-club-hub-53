@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -7,6 +6,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section-padding bg-white px-4">
       <div className="container mx-auto max-w-6xl">
+        {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,8 +24,11 @@ export default function ContactSection() {
             Have questions or want to join IS Club? We'd love to hear from you! Reach out to us through any of the channels below.
           </p>
         </motion.div>
-        
+
+        {/* Contact Grid */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          
+          {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -33,6 +36,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="space-y-8">
+              {/* Email */}
               <div className="flex items-start space-x-4">
                 <div className="bg-isclub-blue-light/70 p-3 rounded-md">
                   <Mail className="w-6 h-6 text-isclub-blue" />
@@ -40,100 +44,64 @@ export default function ContactSection() {
                 <div>
                   <h3 className="text-lg font-medium mb-1">Email Us</h3>
                   <p className="text-gray-600 mb-2">For general inquiries and membership info</p>
-                  <a href="mailto:isclub@kusom.edu" className="text-isclub-blue hover:underline">isclub@kusom.edu</a>
+                  <a href="mailto:informationsystemclub@kusom.edu.np" className="text-isclub-blue hover:underline">
+                  informationsystemclub@kusom.edu.np
+                  </a>
                 </div>
               </div>
-              
+
+              {/* Phone */}
               <div className="flex items-start space-x-4">
                 <div className="bg-isclub-blue-light/70 p-3 rounded-md">
                   <Phone className="w-6 h-6 text-isclub-blue" />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                  <p className="text-gray-600 mb-2">Monday to Friday, 9AM - 5PM</p>
-                  <a href="tel:+1234567890" className="text-isclub-blue hover:underline">+1 (234) 567-890</a>
+                  <p className="text-gray-600 mb-2">Sunday to Friday, 7AM - 2PM</p>
+                  <a href="tel:+9779840037381" className="text-isclub-blue hover:underline">
+                    +977 9840037381
+                  </a>
                 </div>
               </div>
-              
+
+              {/* Address */}
               <div className="flex items-start space-x-4">
                 <div className="bg-isclub-blue-light/70 p-3 rounded-md">
                   <MapPin className="w-6 h-6 text-isclub-blue" />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Visit Us</h3>
-                  <p className="text-gray-600 mb-2">Find us at the KUSOM campus</p>
-                  <p className="text-isclub-dark">Room 302, Technology Building, KUSOM Campus</p>
+                  <p className="text-gray-600 mb-2">Find us at the KU Central Campus</p>
+                  <p className="text-isclub-dark">
+                    Block 10, KU Central Campus, Dhulikhel
+                  </p>
                 </div>
               </div>
             </div>
           </motion.div>
-          
+
+          {/* Right: Google Map */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-display font-bold mb-6">Send us a message</h3>
-              
-              <div className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Your name"
-                    className={cn(
-                      "w-full px-4 py-3 rounded-lg border border-gray-300",
-                      "focus:ring-2 focus:ring-isclub-blue focus:border-isclub-blue",
-                      "transition-colors focus:outline-none"
-                    )}
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="Your email address"
-                    className={cn(
-                      "w-full px-4 py-3 rounded-lg border border-gray-300",
-                      "focus:ring-2 focus:ring-isclub-blue focus:border-isclub-blue",
-                      "transition-colors focus:outline-none"
-                    )}
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder="Tell us what you need"
-                    className={cn(
-                      "w-full px-4 py-3 rounded-lg border border-gray-300",
-                      "focus:ring-2 focus:ring-isclub-blue focus:border-isclub-blue",
-                      "transition-colors focus:outline-none"
-                    )}
-                  ></textarea>
-                </div>
-                
-                <button
-                  type="submit"
-                  className={cn(
-                    "w-full px-6 py-3 rounded-lg bg-isclub-blue text-white font-medium",
-                    "transition-all duration-300 transform hover:translate-y-[-2px]",
-                    "shadow-lg shadow-isclub-blue/20 hover:shadow-xl hover:shadow-isclub-blue/30",
-                    "focus:outline-none focus:ring-2 focus:ring-isclub-blue/50"
-                  )}
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
+            <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow">
+              <iframe
+                className="w-full h-full"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight={0}
+                marginWidth={0}
+                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=department of management, informatics and communication&amp;t=h&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                title="IS Club Location"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
           </motion.div>
+
         </div>
       </div>
     </section>
