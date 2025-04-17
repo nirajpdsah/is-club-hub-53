@@ -19,38 +19,20 @@ export default function EventsSection() {
     {
       id: "web-dev-workshop",
       title: "Web Development Workshop",
-      date: "October 15, 2023",
-      time: "2:00 PM - 5:00 PM",
-      location: "KUSOM Tech Lab",
-      description: "Learn the fundamentals of modern web development with HTML, CSS, and JavaScript.",
-      imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+      date: "30th March, 2025 onwards",
+      time: "12:00 PM - 3:00 PM",
+      location: "Computer Lab, Block 10",
+      description: "Learn the fundamentals of modern web development with AI.",
+      imageUrl: "https://i.imgur.com/wMJkWRA.jpeg"
     },
     {
       id: "design-thinking",
-      title: "Design Thinking Seminar",
-      date: "November 5, 2023",
-      time: "1:00 PM - 3:30 PM",
-      location: "KUSOM Auditorium",
-      description: "A comprehensive workshop on applying design thinking principles to business problems.",
+      title: "IS Hackathon",
+      date: "May 23-25, 2025",
+      time: "48 Hours",
+      location: "Multi-purpose Hall, KU",
+      description: "Join us for a 48-hour hackathon where teams will compete to build innovative solutions to real-world problems.",
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-    },
-    {
-      id: "tech-symposium",
-      title: "Annual Tech Symposium",
-      date: "December 10, 2023",
-      time: "9:00 AM - 4:00 PM",
-      location: "KUSOM Main Hall",
-      description: "Our flagship event featuring industry speakers, tech showcases, and networking opportunities.",
-      imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
-    },
-    {
-      id: "ai-bootcamp",
-      title: "AI Innovation Bootcamp",
-      date: "August 1, 2025",
-      time: "9:00 AM - 5:00 PM",
-      location: "KUSOM Innovation Lab",
-      description: "A comprehensive one-day bootcamp exploring the latest developments in Artificial Intelligence and its applications.",
-      imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcc9e20d"
     }
   ];
 
@@ -68,7 +50,7 @@ export default function EventsSection() {
             What's Happening
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-            Upcoming Events
+            Our Events
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Join us for our exciting lineup of workshops, seminars, and networking events designed to enhance your technical skills and expand your professional connections.

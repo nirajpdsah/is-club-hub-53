@@ -6,11 +6,11 @@ const events = [
   {
     id: "web-dev-workshop",
     title: "Web Development Workshop",
-    date: "October 15, 2023",
-    time: "2:00 PM - 5:00 PM",
-    location: "KUSOM Tech Lab",
+    date: "March 30, 2025 onwards",
+    time: "12:00 PM - 3:00 PM",
+    location: "Computer Lab, Block 10",
     description: "Learn the fundamentals of modern web development with HTML, CSS, and JavaScript.",
-    imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    imageUrl: "https://i.imgur.com/wMJkWRA.jpeg",
     longDescription: `
       Join us for an immersive workshop focused on modern web development technologies and best practices. 
       This hands-on session will guide you through the fundamentals of HTML, CSS, and JavaScript, 
@@ -26,24 +26,17 @@ const events = [
       "Laptop with a modern browser installed",
       "Text editor (VS Code recommended)"
     ],
-    schedule: [
-      { time: "2:00 PM", activity: "Introduction to Web Development" },
-      { time: "2:30 PM", activity: "HTML Fundamentals & Practice" },
-      { time: "3:15 PM", activity: "Break" },
-      { time: "3:30 PM", activity: "CSS Styling & Responsive Design" },
-      { time: "4:15 PM", activity: "JavaScript Basics" },
-      { time: "4:45 PM", activity: "Q&A and Project Showcase" }
-    ],
+  
     speakers: [
       {
-        name: "Sarah Johnson",
-        role: "Senior Web Developer at TechCorp",
-        imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+        name: "Oman Chaudhary",
+        role: "Technical Head at IS Club",
+        imageUrl: "https://i.imgur.com/vlHPt4T.jpeg"
       },
       {
-        name: "David Chen",
-        role: "UX Designer & Frontend Expert",
-        imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+        name: "Niraj Prasad Sah",
+        role: "Secretary at IS Club",
+        imageUrl: "https://i.imgur.com/ozI1oZ2.jpeg"
       }
     ]
   },
@@ -127,6 +120,7 @@ const events = [
         imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
       }
     ]
+    
   },
   {
     id: "ai-bootcamp",

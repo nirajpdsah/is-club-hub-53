@@ -136,7 +136,7 @@ export default function EventDetail({ events }: EventDetailProps) {
                 <div className="mt-12">
                   <h3 className="text-xl font-display font-semibold mb-6 flex items-center">
                     <Users className="w-5 h-5 mr-2 text-isclub-teal" />
-                    Speakers
+                    Instructors
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {event.speakers.map((speaker, index) => (
