@@ -8,6 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-8">
           <div className="col-span-1">
             <a href="#" className="flex items-center space-x-2 mb-6">
+              <span><img src="https://i.imgur.com/Z9AjSJE.png" alt="Logo" width="32px" /></span>
               <span className="text-isclub-teal font-display font-bold text-xl">IS</span>
               <span className="font-display font-medium text-xl">Club</span>
             </a>

@@ -47,6 +47,7 @@ export default function Navbar() {
           to="/" 
           className="flex items-center space-x-2 transition-opacity hover:opacity-80"
         >
+          <span><img src="https://i.imgur.com/Z9AjSJE.png" alt="Logo" width="32px"/></span>
           <span className="font-mono text-isclub-teal font-bold text-xl">IS</span>
           <span className="font-mono font-medium text-xl text-isclub-dark">Club</span>
         </Link>
