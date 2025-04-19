@@ -1,21 +1,19 @@
 
-import { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import Footer from '@/components/Footer';
-import EventTimeline from '@/components/EventTimeline';
-import BriefAbout from '@/components/BriefAbout';
+import React from 'react';
+import HeroSection from '../components/HeroSection';
+import BriefAbout from '../components/BriefAbout';
+import CountdownTimer from '../components/CountdownTimer';
+import FocusAreasSection from '../components/FocusAreasSection';
+import ContactSection from '../components/ContactSection';
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <BriefAbout />
-        <EventTimeline />
-      </main>
-      <Footer />
+    <div className="min-h-screen">
+      <HeroSection />
+      <BriefAbout />
+      <CountdownTimer />
+      <FocusAreasSection />
+      <ContactSection />
     </div>
   );
 };
